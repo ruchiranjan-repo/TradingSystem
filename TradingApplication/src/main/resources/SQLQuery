@@ -1,0 +1,12 @@
+insert into user values (1,'ruchiranja@outlook.com','Ruchi','test');
+insert into user values  (2,'ruchiranja1@outlook.com','Ruchi1','test1');
+insert into user values  (3,'ruchiranja2@outlook.com','Ruchi2','test2');
+
+select * from user
+
+insert into stock values (1,'2020-03-20','stock1',100,2000);
+insert into stock values (2,'2020-03-20','stoc2',150,200);
+insert into stock values (3,'2020-03-20','stock3',100,200);
+
+select * from stock 
+

@@ -4,9 +4,11 @@ package com.tradingdemo.trading.exception;
  */
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
+@PropertySource("classpath:messages.properties")
 public class ExceptionMessageProprties {
 
 	@Value("${com.trading.exception.usernotfound.message}")

@@ -11,7 +11,7 @@ public class PurchasedStockResponseDTO {
 	
 	private Long userId;
 	private String userName;
-	private List<PurchasedStockDTO> purchasedStockDTOs = new ArrayList<PurchasedStockDTO>();
+	private List<PurchasedStockDTO> purchasedStockDTOs = new ArrayList<>();
 
 	public PurchasedStockResponseDTO() {
 

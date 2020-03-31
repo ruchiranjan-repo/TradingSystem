@@ -99,7 +99,7 @@ public class UserServiceImpl implements UserService {
 	public PurchasedStockResponseDTO getPurchasedStock(Long userId) throws UserNotFoundException {
 		User user = getUserById(userId);
 		List<PurchasedStock> purchasedStocks = purchaseStockRepository.findByUserId(userId);
-		List<PurchasedStockDTO> purchasedStockDTOs = new ArrayList<PurchasedStockDTO>();
+		List<PurchasedStockDTO> purchasedStockDTOs = new ArrayList<>();
 		if (!CollectionUtils.isEmpty(purchasedStocks)) {
 
 			for (PurchasedStock purchasedStock : purchasedStocks) {

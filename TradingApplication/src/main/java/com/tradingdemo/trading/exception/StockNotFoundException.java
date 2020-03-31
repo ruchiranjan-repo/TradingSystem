@@ -9,7 +9,7 @@ package com.tradingdemo.trading.exception;
 public class StockNotFoundException extends Exception {
 
 	private static final long serialVersionUID = 1L;
-	private Integer errorCode;
+	private  final Integer errorCode;
 
 	public StockNotFoundException(String  message, Integer errorCode) {
 		super(message);

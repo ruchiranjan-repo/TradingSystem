@@ -9,7 +9,7 @@ package com.tradingdemo.trading.exception;
 public class UserNotFoundException extends Exception {
 
 	private static final long serialVersionUID = 1L;
-	private Integer errorCode;
+	private final Integer errorCode;
 
 	public UserNotFoundException(String  message, Integer errorCode) {
 		super(message);

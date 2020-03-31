@@ -30,14 +30,14 @@ public class StockRestController {
 	public ResponseEntity<StockDetailsDTO> getAvailableStockDetails(@PathVariable("stockId") Long stockId)
 			throws StockNotFoundException {
 		StockDetailsDTO stockDetailsDTO = stockService.getAvailableStockDetails(stockId);
-		return new ResponseEntity<StockDetailsDTO>(stockDetailsDTO, HttpStatus.OK);
+		return new ResponseEntity<>(stockDetailsDTO, HttpStatus.OK);
 	}
 
 	@GetMapping("")
 	public ResponseEntity<List<StockDTO>> getStockByStockName(@RequestParam("stockName") String stockName)
 			throws StockNotFoundException {
 		List<StockDTO> stockDtos = stockService.getStockByStockName(stockName);
-		return new ResponseEntity<List<StockDTO>>(stockDtos, HttpStatus.OK);
+		return new ResponseEntity<>(stockDtos, HttpStatus.OK);
 	}
 
 }

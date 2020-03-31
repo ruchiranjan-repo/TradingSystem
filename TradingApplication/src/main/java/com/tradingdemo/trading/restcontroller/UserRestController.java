@@ -32,7 +32,7 @@ public class UserRestController {
 	public ResponseEntity<SuccessMessageDTO> purchaseStock(@PathVariable("userId") Long userId, @RequestBody PurchaseStockRequestDTO purchaseStockRequestDTO) throws UserNotFoundException, StockNotFoundException, StockNotAvailableException
 	{
 		SuccessMessageDTO successMessageDTO = userService.purchaseStock(userId, purchaseStockRequestDTO);
-		return new ResponseEntity<SuccessMessageDTO>(successMessageDTO,HttpStatus.CREATED);
+		return new ResponseEntity<>(successMessageDTO,HttpStatus.CREATED);
 		
 	}
 	
@@ -41,7 +41,7 @@ public class UserRestController {
 	public ResponseEntity<PurchasedStockResponseDTO> getPurchasedStock(@PathVariable("userId")Long userId) throws UserNotFoundException
 	{
 		PurchasedStockResponseDTO purchasedStockResponseDTO=userService.getPurchasedStock(userId);
-		return new ResponseEntity<PurchasedStockResponseDTO>(purchasedStockResponseDTO,HttpStatus.OK);
+		return new ResponseEntity<>(purchasedStockResponseDTO,HttpStatus.OK);
 		
 	}
 

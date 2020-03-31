@@ -63,8 +63,8 @@ public class StockServiceImpl implements StockService {
 
 	@Override
 	public StockDetailsDTO getAvailableStockDetails(Long stockId) throws StockNotFoundException {
-		Optional<Stock> Stock = stockRepository.findById(stockId);
-		if (!Stock.isPresent()) {
+		Optional<Stock> stock = stockRepository.findById(stockId);
+		if (!stock.isPresent()) {
 			log.warn("Stock not found. stock id: " + stockId);
 			throw new StockNotFoundException(
 					new StringBuffer(exceptionMessageProprties.getStockNotFoundMessage()).append(stockId).toString(),
@@ -72,8 +72,8 @@ public class StockServiceImpl implements StockService {
 
 		}
 		log.info("Stock found with stock id :" + stockId);
-		return new StockDetailsDTO(Stock.get().getId(), Stock.get().getName(), Stock.get().getUnitPrice(),
-				Stock.get().getQuantity(), Stock.get().getDate());
+		return new StockDetailsDTO(stock.get().getId(), stock.get().getName(), stock.get().getUnitPrice(),
+				stock.get().getQuantity(), stock.get().getDate());
 	}
 
 }
